@@ -1,4 +1,4 @@
-
+import mongoose from "mongoose";
 // Define a schema for Users
 // const userSchema = new mongoose.Schema({
 //   username: { type: String, required: true },
@@ -29,7 +29,7 @@ const issueSchema = new mongoose.Schema({
 
 // Define models based on the schemas
 //const User = mongoose.model('User', userSchema);
-const Issue = mongoose.model('Issue', issueSchema);
+const IssueTrack = mongoose.models.IssueTrack || mongoose.model('IssueTrack', issueSchema);
 //const Comments = mongoose.model('Comment', commentSchema);
 
-module.exports = {  Issue };
+module.exports = { IssueTrack };
